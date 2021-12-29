@@ -14,7 +14,7 @@
 .sidebar {
   max-width: 300px;
   width: 300px;
-  height: calc(100vh - 56px);
+  height: 100vh;
   transition: all .5s ease;
 }
 
@@ -699,7 +699,7 @@ video {
 }
 
 .bottom-side {
-  position: fixed;
+  position: absolute;
   bottom: 0px;
   display: flex;
   align-items: center;
@@ -762,6 +762,10 @@ video {
   font-size: 25px;
 }
 
+.menu-wrapper .fa {
+  font-size: 21px;
+}
+
 .sidebar.collapse ul.dropdown-menu {
   position: absolute;
   top: 10px;
@@ -794,6 +798,10 @@ video {
 
 .dropdown-link i.bx {
   font-size: 18px;
+}
+
+.dropdown-link i.fa {
+  font-size: 15px;
 }
 
 .dropdown-blank {
@@ -929,15 +937,18 @@ video {
   height: 55px;
   z-index: 99;
   background-color: #d1d5db;
+  right: 0;
+  transition: all .5s;
+}
+
+.navbar.fixed {
+  width: calc(100% - 300px);
   box-shadow: 2px 3px 6px #39485e70;
 }
 
-/* .navbar.sticky {
-    /* top:0; */
-
-/* width: 100vw; */
-
-/* } */
+.main-container.expand .navbar.fixed {
+  width: calc(100% - 80px);
+}
 
 .toggle-sidebar {
   display: flex;
