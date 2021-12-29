@@ -89,7 +89,7 @@
 @layer components {
 
     .content {
-        @apply bg-gray-200 px-5 py-3 overflow-x-hidden pb-8;
+        @apply bg-gray-200 px-5 pt-5 overflow-x-hidden pb-8;
     }
 
     .content .content-title {
@@ -97,21 +97,21 @@
     }
 
     .content .header {
-        @apply flex justify-between sm:justify-evenly flex-wrap my-2
+        @apply flex justify-evenly sm:justify-evenly flex-wrap my-2
     }
 
     .content .first-container,
     .content .second-container {
-        @apply w-full rounded-xl flex justify-between;
+        @apply w-full rounded-xl xl:flex justify-between;
     }
 
     .first-container .stat-card,
     .second-container .stat-card {
-        @apply w-1/2 bg-white p-4 rounded-xl;
+        @apply w-full bg-white p-4 rounded-xl xl:w-1/2;
     }
 
     .first-container .stat-card.popular-post-wrapper {
-        @apply mr-3 block;
+        @apply xl:mr-3 block;
     }
 
     .popular-post-title,
@@ -121,7 +121,7 @@
     }
 
     .first-container .stat-card.visitor-chart {
-        @apply ml-3 block;
+        @apply xl:ml-3 mt-4 xl:mt-0 block;
     }
 
     .popular-post-card {
@@ -186,9 +186,9 @@
 
 }
 
-/* .content {
-    padding-top: 67px;
-} */
+.navbar.fixed ~ .content {
+    padding-top: 75px;
+}
 
 .card {
     position: relative;
