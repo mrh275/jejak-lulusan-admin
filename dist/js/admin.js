@@ -1,3 +1,10 @@
+// Check window size
+if(screen.width < 768) {
+  $('.sidebar').removeClass('expand');
+  $('.sidebar').addClass('collapse');
+  $('.main-container').addClass('expand');
+}
+
 $('.toggle-sidebar').on('click', () => {
     $('.sidebar').toggleClass('collapse');
     $('.sidebar').toggleClass('expand');
@@ -5,23 +12,18 @@ $('.toggle-sidebar').on('click', () => {
     $('.sidebar').toggleClass('overflow-y-auto');
     $('.bottom-side').toggleClass('collapse');
     $('.main-container').toggleClass('expand');
-    // $('.navbar').toggleClass('expand');
 })
 
 // Navbar sticky on scroll
-// let lastScrollTop = 0;
-// $(window).scroll(function(event){
-//   let st = $(this).scrollTop();
-//   if(st > lastScrollTop) {
-//     // $('.navbar').removeClass('absolute');
-//     $('.navbar').addClass('fixed');
-//     $('.navbar').addClass('sticky');
-//   } else {
-//     $('.navbar').removeClass('sticky');
-//     $('.navbar').removeClass('fixed');
-//     // $('.navbar').addClass('absolute');
-//   }
-// });
+let lastScrollTop = 0;
+$(window).scroll(function(event){
+  let st = $(this).scrollTop();
+  if(st > lastScrollTop) {
+    $('.navbar').addClass('fixed');
+  } else {
+    $('.navbar').removeClass('fixed');
+  }
+});
 
 // Dropdown toggle
 $('ul.nav-menu').on('click', '.dropdown', function() {
