@@ -153,7 +153,7 @@
     }
 
     .second-container .stat-card:nth-child(2) {
-        @apply ml-3;
+        @apply xl:ml-3;
     }
 
     .stat-card.comment-preview .comment-view-card {
@@ -487,4 +487,38 @@ hr.comment-break {
     background: #0099ff;
     border: none;
     color: white !important;
+}
+
+/* Display Size Modifier */
+@media (max-width: 767px) {
+    .popular-post-body .popular-post-card.slick-slide {
+        display: block !important;
+    }
+
+    .popular-post-img {
+        min-width: 90px;
+        max-width: 235px;
+        border-radius: 5px;
+    }
+
+    .footer {
+        height: max-content;
+        justify-content: center;
+    }
+
+    .footer span {
+        text-align: center;
+        font-size: .6rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .footer {
+        height: max-content;
+        justify-content: center;
+    }
+
+    .footer span {
+        text-align: center;
+    }
 }

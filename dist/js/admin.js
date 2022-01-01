@@ -1,8 +1,11 @@
 // Check window size
 if(screen.width < 768) {
   $('.sidebar').removeClass('expand');
+  $('.sidebar').removeClass('overflow-x-hidden');
+  $('.sidebar').removeClass('overflow-y-auto');
   $('.sidebar').addClass('collapse');
   $('.main-container').addClass('expand');
+  $('.bottom-side').addClass('collapse');
 }
 
 $('.toggle-sidebar').on('click', () => {

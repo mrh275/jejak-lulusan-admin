@@ -291,7 +291,7 @@
 }
 
 .main-container.expand .navbar.fixed {
-    width: calc(100% - 80px);
+    width: calc(100% - 81px);
 }
 
 .toggle-sidebar {
@@ -424,4 +424,31 @@ ul.nav-dropdown a.nav-drop-link .nav-drop-name {
 
 hr.nav-drop-separator {
     border-top: 2px solid #5b5d6370;
+}
+
+@media (max-width: 767px) {
+    .main-container.expand {
+        margin-left: 80px;
+        left: 0;
+        width: calc(100% - 80px);
+    }
+
+    .main-container {
+        margin-left: 80px;
+        left: 0;
+        width: calc(100% - 80px);
+    }
+
+    .navbar {
+        position: fixed;
+        width: calc(100% - 300px);
+    }
+
+    .main-container.expand .navbar {
+        width: calc(100% - 81px);
+    }
+
+    .main-container div.content {
+        padding-top: 80px;
+    }
 }
