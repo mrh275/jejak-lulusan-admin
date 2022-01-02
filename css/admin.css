@@ -24,6 +24,7 @@
 
 @layer components {
 
+    /* Sidebar */
     .sidebar {
         @apply bg-gray-800 fixed z-50;
     }
@@ -64,14 +65,19 @@
         @apply pointer-events-none opacity-0 invisible;
     }
 
-    .active-open {
-        background-color: white;
-        color: #0099ff;
-    }
-
     .bottom-side {
         @apply absolute bottom-0 flex bg-gray-700 items-center justify-between;
     }
+}
+
+.active {
+    background: white;
+    color: #1f2937;
+}
+
+.active-open {
+    background-color: white;
+    color: #0099ff;
 }
 
 
@@ -144,12 +150,22 @@
     font-size: 16px;
 }
 
+.nav-link i.bx {
+    transition: all .2s ease-in-out;
+}
+
+.nav-link i.fa {
+    transition: all .2s ease-in-out;
+}
+
 .dropdown-link i.bx {
     font-size: 18px;
+    transition: all .2s ease-in-out;
 }
 
 .dropdown-link i.fa {
     font-size: 15px;
+    transition: all .2s ease-in-out;
 }
 
 .dropdown-blank {
