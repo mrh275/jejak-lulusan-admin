@@ -47,53 +47,6 @@ $('.btn-user').on('click', function() {
     $(this).parent().find('.nav-dropdown').toggleClass('showNavDropdown')
 })
 
-// $('.nav-list a').on('click', function(e) {
-//     e.preventDefault();
-
-//     let linkAttr = $(this).attr('href');
-//     console.log(linkAttr);
-//     if(linkAttr != null) {
-//         Swal.fire({
-//             title: "Memuat...",
-//             timer: 1000,
-//             width: "15rem",
-//             didOpen: () => {
-//                 Swal.showLoading()
-//             }
-//         }).then((result) => {
-//             $('div.content').load(linkAttr);
-//         })
-//     }
-// })
-
-
-
-// $(document).ready(function(){
-
-//     $(".nav-list a").click(function(e){
-//         e.preventDefault();
-//         let linkAttr = $(this).attr('href');
-//         console.log(linkAttr);
-//         $.ajax({
-//             success: function(result){
-//             if(linkAttr != null) {
-//                 Swal.fire({
-//                     title: "Memuat...",
-//                     timer: 1000,
-//                     width: "15rem",
-//                     didOpen: () => {
-//                         Swal.showLoading()
-//                     }
-//                 }).then((result) => {
-//                     $('div.content').load(linkAttr);
-//                 })
-//             }
-//           }});
-//       });
-
-      
-// })
-
 // Popular post vertical carousel
 $("div.popular-post-body").slick({
     vertical: true,
@@ -143,18 +96,33 @@ const labels = [
   );
 
   // List Post Datatable
-  $(document).ready(function() {
-    $('.list-posts').DataTable({
-      "lengthMenu": [
-        [5, 10, 25, 50, 100, -1],
-        [5, 10, 25, 50, 100, "All"]
-      ],
-      "pagingType": "full_numbers",
-      "language": {
-        "paginate": {
-          "previous": "<i class='bx bx-chevron-left'></i>",
-          "next": "<i class='bx bx-chevron-right' ></i>"
-        }
-      }
-    });
-} );
+//   $(document).ready(function() {
+//     $('.list-posts').DataTable({
+//       "lengthMenu": [
+//         [5, 10, 25, 50, 100, -1],
+//         [5, 10, 25, 50, 100, "All"]
+//       ],
+//       "pagingType": "full_numbers",
+//       "language": {
+//         "paginate": {
+//           "previous": "<i class='bx bx-chevron-left'></i>",
+//           "next": "<i class='bx bx-chevron-right' ></i>"
+//         }
+//       }
+//     });
+// } );
+
+// Datepicker Input Form
+const inputDate = document.querySelector('input[name="tanggalLahir"]');
+const datepicker = new Datepicker(inputDate, {
+  format: {
+    toValue(date) {
+      const fullYearDate = date.replace(/\/(\d\d)$/, '/20$1');
+      return Datepicker.parseDate(fullYearDate, 'dd/mm/yyyy')
+    },
+    toDisplay(date) {
+      return Datepicker.formatDate(date , 'dd/mm/yyyy');
+    },
+  },
+  autohide: true,
+});
