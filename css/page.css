@@ -106,11 +106,11 @@
     }
     
     .form-wrapper {
-        @apply flex mb-4;
+        @apply lg:flex mb-4;
     }
 
     .label-wrapper {
-        @apply w-3/12 flex items-center;
+        @apply w-full lg:w-3/12 flex items-center;
     }
 
     .label-form {
@@ -118,7 +118,7 @@
     }
 
     .input-wrapper {
-        @apply w-9/12 flex items-center;
+        @apply w-full lg:w-9/12 flex items-center;
     }
 
     .form-control {

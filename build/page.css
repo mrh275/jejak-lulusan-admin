@@ -191,13 +191,24 @@
 
 .form-wrapper {
   margin-bottom: 1rem;
-  display: flex;
+}
+
+@media (min-width: 1024px) {
+  .form-wrapper {
+    display: flex;
+  }
 }
 
 .label-wrapper {
   display: flex;
-  width: 25%;
+  width: 100%;
   align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .label-wrapper {
+    width: 25%;
+  }
 }
 
 .label-form {
@@ -210,8 +221,14 @@
 
 .input-wrapper {
   display: flex;
-  width: 75%;
+  width: 100%;
   align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .input-wrapper {
+    width: 75%;
+  }
 }
 
 .form-control {
