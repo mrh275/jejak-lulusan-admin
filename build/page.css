@@ -279,6 +279,27 @@
   margin-top: 2rem;
 }
 
+/* Datatable */
+
+.table-biodata {
+  table-layout: auto;
+  border-collapse: collapse;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(55 65 81 / var(--tw-border-opacity));
+  text-align: center;
+}
+
+.table-biodata td, .table-biodata th {
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(75 85 99 / var(--tw-border-opacity));
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
 /* Half Container */
 
 .content .first-container, .content .second-container {
@@ -654,15 +675,35 @@ hr.comment-break {
 
 /* Datatable Properties */
 
-.dataTables_wrapper .dataTables_filter input {
+.dataTables_wrapper .dataTables_length select {
   border-radius: 10px !important;
-  transition: .2s;
-  padding: 5px 11px !important;
+  transition: .3s;
+  padding: 5px 2px !important;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
-.dataTables_wrapper .dataTables_filter input:focus {
+.dataTables_wrapper .dataTables_filter input {
+  border-radius: 10px !important;
+  transition: .3s;
+  padding: 5px 11px !important;
+  margin-bottom: 10px;
+}
+
+.dataTables_wrapper .dataTables_filter input:focus, .dataTables_wrapper .dataTables_length select:focus {
   outline-offset: 0;
   outline-color: #0099ff;
+}
+
+/* Table Number Increment */
+
+table {
+  counter-reset: section;
+}
+
+.number::before {
+  counter-increment: section;
+  content:counter(section);
 }
 
 /* Pagination */

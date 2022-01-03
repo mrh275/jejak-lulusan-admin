@@ -139,6 +139,15 @@
         @apply mt-8;
     }
 
+    /* Datatable */
+    .table-biodata {
+        @apply table-auto text-center border border-collapse border-gray-700;
+    }
+
+    .table-biodata td, .table-biodata th {
+        @apply border border-gray-600 px-2 py-1;
+    }
+
     /* Half Container */
     .content .first-container,
     .content .second-container {
@@ -458,15 +467,34 @@ hr.comment-break {
 
 /* Datatable Properties */
 
-.dataTables_wrapper .dataTables_filter input {
+.dataTables_wrapper .dataTables_length select {
     border-radius: 10px !important;
-    transition: .2s;
-    padding: 5px 11px !important;
+    transition: .3s;
+    padding: 5px 2px !important;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
-.dataTables_wrapper .dataTables_filter input:focus {
+.dataTables_wrapper .dataTables_filter input {
+    border-radius: 10px !important;
+    transition: .3s;
+    padding: 5px 11px !important;
+    margin-bottom: 10px;
+}
+
+.dataTables_wrapper .dataTables_filter input:focus, .dataTables_wrapper .dataTables_length select:focus {
     outline-offset: 0;
     outline-color: #0099ff;
+}
+
+/* Table Number Increment */
+table {
+    counter-reset: section;
+}
+
+.number::before {
+    counter-increment: section;
+    content:counter(section);
 }
 
 /* Pagination */
