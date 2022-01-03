@@ -96,21 +96,21 @@ const labels = [
   );
 
   // List Post Datatable
-//   $(document).ready(function() {
-//     $('.list-posts').DataTable({
-//       "lengthMenu": [
-//         [5, 10, 25, 50, 100, -1],
-//         [5, 10, 25, 50, 100, "All"]
-//       ],
-//       "pagingType": "full_numbers",
-//       "language": {
-//         "paginate": {
-//           "previous": "<i class='bx bx-chevron-left'></i>",
-//           "next": "<i class='bx bx-chevron-right' ></i>"
-//         }
-//       }
-//     });
-// } );
+  $(document).ready(function() {
+    $('.table-biodata').DataTable({
+      "lengthMenu": [
+        [5, 10, 25, 50, 100, -1],
+        [5, 10, 25, 50, 100, "All"]
+      ],
+      "pagingType": "full_numbers",
+      "language": {
+        "paginate": {
+          "previous": "<i class='bx bx-chevron-left'></i>",
+          "next": "<i class='bx bx-chevron-right' ></i>"
+        }
+      }
+    });
+} );
 
 // Datepicker Input Form
 const inputDate = document.querySelector('input[name="tanggalLahir"]');
