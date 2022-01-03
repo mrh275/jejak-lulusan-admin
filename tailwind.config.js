@@ -1,10 +1,7 @@
 module.exports = {
   mode: 'jit',
-  purge: {
-    // enabled: false,
-    content: ["./*.html"]
-  },
-  darkMode: false, // or 'media' or 'class'
+  content: ["./*.html"],
+  // darkMode: false,  or 'media' or 'class'
   theme: {
     extend: {
       fontFamily: {
