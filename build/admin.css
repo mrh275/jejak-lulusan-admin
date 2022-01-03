@@ -14,7 +14,7 @@
 .sidebar {
   max-width: 300px;
   width: 300px;
-  height: 100vh;
+  height: calc(100vh - 56px);
   transition: all .5s ease;
 }
 
@@ -569,13 +569,22 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .bottom-side {
-  position: absolute;
+  position: fixed;
   bottom: 0px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   --tw-bg-opacity: 1;
   background-color: rgb(55 65 81 / var(--tw-bg-opacity));
+}
+
+.navbar.bottom-side {
+  width: calc(100% - 300px);
+  box-shadow: 2px 3px 6px #39485e70;
+}
+
+.main-container.expand .navbar.bottom-side {
+  width: calc(100% - 81px);
 }
 
 .fixed {
