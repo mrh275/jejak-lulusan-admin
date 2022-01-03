@@ -189,6 +189,8 @@
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+/* Form */
+
 .form-wrapper {
   margin-bottom: 1rem;
 }
@@ -260,6 +262,21 @@
 .button-wrapper {
   display: flex;
   justify-content: flex-end;
+}
+
+/* Form Orangtua */
+
+.ayah-title, .ibu-title {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity));
+}
+
+.ibu-title {
+  margin-top: 2rem;
 }
 
 /* Half Container */

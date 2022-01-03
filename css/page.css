@@ -105,6 +105,7 @@
         @apply w-full my-4 p-5 rounded-lg bg-gray-100 shadow-md;
     }
     
+    /* Form */
     .form-wrapper {
         @apply lg:flex mb-4;
     }
@@ -127,6 +128,15 @@
 
     .button-wrapper {
         @apply flex justify-end;
+    }
+
+    /* Form Orangtua */
+    .ayah-title, .ibu-title {
+        @apply text-gray-600 text-2xl font-semibold mb-4
+    }
+
+    .ibu-title {
+        @apply mt-8;
     }
 
     /* Half Container */
