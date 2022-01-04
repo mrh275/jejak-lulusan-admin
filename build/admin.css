@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
 *::-webkit-scrollbar {
   width: 10px;
 }
@@ -443,53 +445,48 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: none;
 }
 
-* {
+*{
   scrollbar-color: initial;
   scrollbar-width: initial;
 }
 
-*, ::before, ::after {
-  --tw-border-opacity: 1;
-  border-color: rgb(229 231 235 / var(--tw-border-opacity));
-}
-
-.container {
+.container{
   width: 100%;
 }
 
-@media (min-width: 640px) {
-  .container {
+@media (min-width: 640px){
+  .container{
     max-width: 640px;
   }
 }
 
-@media (min-width: 768px) {
-  .container {
+@media (min-width: 768px){
+  .container{
     max-width: 768px;
   }
 }
 
-@media (min-width: 1024px) {
-  .container {
+@media (min-width: 1024px){
+  .container{
     max-width: 1024px;
   }
 }
 
-@media (min-width: 1280px) {
-  .container {
+@media (min-width: 1280px){
+  .container{
     max-width: 1280px;
   }
 }
 
-@media (min-width: 1536px) {
-  .container {
+@media (min-width: 1536px){
+  .container{
     max-width: 1536px;
   }
 }
 
 /* Sidebar */
 
-.sidebar {
+.sidebar{
   position: fixed;
   z-index: 50;
   --tw-bg-opacity: 1;
@@ -505,24 +502,24 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: calc(100% - 81px);
 }
 
-.sidebar.collapse {
+.sidebar.collapse{
   width: 5rem;
 }
 
-.top-side {
+.top-side{
   display: flex;
   align-items: center;
   padding: 1.25rem;
 }
 
-.brand {
+.brand{
   margin-left: 1.25rem;
   transition-property: all;
   transition-duration: 300ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.brandName {
+.brandName{
   pointer-events: none;
   white-space: nowrap;
   font-size: 1.5rem;
@@ -532,11 +529,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.nav-list {
+.nav-list{
   position: relative;
 }
 
-.nav-link {
+.nav-link{
   display: flex;
   align-items: center;
   padding-top: 0.75rem;
@@ -546,7 +543,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.dropdown-link {
+.dropdown-link{
   display: inline-block;
   width: 100%;
   padding-top: 0.5rem;
@@ -556,7 +553,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.link-name {
+.link-name{
   margin-left: 2rem;
   white-space: nowrap;
   font-size: 1.125rem;
@@ -567,13 +564,13 @@ Ensure the default browser behavior of the `hidden` attribute.
   transition-duration: 300ms;
 }
 
-.sidebar.collapse .link-name {
+.sidebar.collapse .link-name{
   pointer-events: none;
   visibility: hidden;
   opacity: 0;
 }
 
-.bottom-side {
+.bottom-side{
   position: fixed;
   bottom: 0px;
   display: flex;
@@ -592,56 +589,31 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: calc(100% - 81px);
 }
 
-.fixed {
+.fixed{
   position: fixed;
 }
 
-.table {
+.table{
   display: table;
 }
 
-.table-auto {
-  table-layout: auto;
-}
-
-.table-fixed {
-  table-layout: fixed;
-}
-
-.border-collapse {
-  border-collapse: collapse;
-}
-
-.overflow-y-auto {
+.overflow-y-auto{
   overflow-y: auto;
 }
 
-.overflow-x-hidden {
+.overflow-x-hidden{
   overflow-x: hidden;
 }
 
-.border {
-  border-width: 1px;
-}
-
-.border-gray-700 {
-  --tw-border-opacity: 1;
-  border-color: rgb(55 65 81 / var(--tw-border-opacity));
-}
-
-.text-left {
+.text-left{
   text-align: left;
 }
 
-.text-center {
-  text-align: center;
-}
-
-.scrollbar.overflow-x-hidden {
+.scrollbar.overflow-x-hidden{
   overflow-x: hidden;
 }
 
-.scrollbar-thin.overflow-x-hidden {
+.scrollbar-thin.overflow-x-hidden{
   overflow-x: hidden;
 }
 
