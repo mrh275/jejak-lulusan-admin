@@ -570,6 +570,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   opacity: 0;
 }
 
+.sidebar.collapse .dropdown-link.active-open, .sidebar.collapse .nav-link.active{
+  --tw-text-opacity: 1;
+  color: rgb(0 153 255 / var(--tw-text-opacity));
+}
+
 .bottom-side{
   position: fixed;
   bottom: 0px;
