@@ -99,8 +99,8 @@ const labels = [
   $(document).ready(function() {
     $('.table-biodata').DataTable({
       "lengthMenu": [
-        [5, 10, 25, 50, 100, -1],
-        [5, 10, 25, 50, 100, "All"]
+        [10, 15, 25, 50, 100, -1],
+        [10, 15, 25, 50, 100, "All"]
       ],
       "pagingType": "full_numbers",
       "language": {
@@ -108,9 +108,18 @@ const labels = [
           "previous": "<i class='bx bx-chevron-left'></i>",
           "next": "<i class='bx bx-chevron-right' ></i>"
         }
-      }
+      },
     });
 } );
+
+// Selecting table row
+$('.table-biodata').on( 'click', 'tr', function () {
+  $('tr').not(this).removeClass('selected');
+  $(this).toggleClass('selected')
+} );
+$('.table-biodata').on( 'click', 'button', function (e) {
+  e.preventDefault();
+});
 
 // Datepicker Input Form
 const inputDate = document.querySelector('input[name="tanggalLahir"]');
