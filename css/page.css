@@ -141,11 +141,42 @@
 
     /* Datatable */
     .table-biodata {
-        @apply table-auto text-center border border-collapse border-gray-700;
+        @apply table-auto text-center border-collapse border-gray-700 rounded-sm;
+    }
+
+    .table-biodata thead tr {
+        @apply bg-gray-700 text-white;
+    }
+
+    .table-biodata tbody tr {
+        @apply cursor-pointer;
+    }
+
+    .table-biodata.dataTable.stripe tbody tr.even,
+    .table-biodata.dataTable.stripe tbody tr.odd {
+        @apply active:bg-orange-300;
+    }
+
+    .table-biodata.dataTable.hover tbody tr.even:hover,
+    .table-biodata.dataTable.hover tbody tr.odd:hover {
+        @apply bg-blue-200;
+    }
+
+    .table-biodata.dataTable.stripe tbody tr.even {
+        @apply bg-gray-300
+    }
+
+    .table-biodata.dataTable tbody tr.even.selected,
+    .table-biodata.dataTable.stripe tbody tr.odd.selected {
+        @apply bg-orange-200 !important;
     }
 
     .table-biodata td, .table-biodata th {
-        @apply border border-gray-600 px-2 py-1;
+        @apply border-gray-600 px-2 py-1;
+    }
+
+    .table-biodata .nama {
+        @apply text-left;
     }
 
     /* Half Container */

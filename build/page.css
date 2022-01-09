@@ -284,20 +284,54 @@
 .table-biodata {
   table-layout: auto;
   border-collapse: collapse;
-  border-width: 1px;
+  border-radius: 0.125rem;
   --tw-border-opacity: 1;
   border-color: rgb(55 65 81 / var(--tw-border-opacity));
   text-align: center;
 }
 
+.table-biodata thead tr {
+  --tw-bg-opacity: 1;
+  background-color: rgb(55 65 81 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.table-biodata tbody tr {
+  cursor: pointer;
+}
+
+.table-biodata.dataTable.stripe tbody tr.even:active, .table-biodata.dataTable.stripe tbody tr.odd:active {
+  --tw-bg-opacity: 1;
+  background-color: rgb(253 186 116 / var(--tw-bg-opacity));
+}
+
+.table-biodata.dataTable.hover tbody tr.even:hover, .table-biodata.dataTable.hover tbody tr.odd:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(191 219 254 / var(--tw-bg-opacity));
+}
+
+.table-biodata.dataTable.stripe tbody tr.even {
+  --tw-bg-opacity: 1;
+  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
+}
+
+.table-biodata.dataTable tbody tr.even.selected, .table-biodata.dataTable.stripe tbody tr.odd.selected {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(254 215 170 / var(--tw-bg-opacity)) !important;
+}
+
 .table-biodata td, .table-biodata th {
-  border-width: 1px;
   --tw-border-opacity: 1;
   border-color: rgb(75 85 99 / var(--tw-border-opacity));
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
+}
+
+.table-biodata .nama {
+  text-align: left;
 }
 
 /* Half Container */
