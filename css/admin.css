@@ -67,6 +67,11 @@
         @apply pointer-events-none opacity-0 invisible;
     }
 
+    .sidebar.collapse .dropdown-link.active-open,
+    .sidebar.collapse .nav-link.active {
+        @apply text-primary;
+    }
+
     .bottom-side {
         @apply fixed bottom-0 flex bg-gray-700 items-center justify-between;
     }
