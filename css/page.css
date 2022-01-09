@@ -126,6 +126,11 @@
         @apply w-full rounded-md border border-gray-400 focus:ring focus:outline-none focus:ring-offset-0 focus:ring-primary/70 transition duration-200 p-1 px-2;
     }
 
+    .form-control[readonly],
+    .form-control[disabled] {
+        @apply cursor-not-allowed;
+    }
+
     .button-wrapper {
         @apply flex justify-end;
     }

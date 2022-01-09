@@ -259,6 +259,10 @@
   --tw-ring-offset-width: 0px;
 }
 
+.form-control[readonly], .form-control[disabled] {
+  cursor: not-allowed;
+}
+
 .button-wrapper {
   display: flex;
   justify-content: flex-end;
