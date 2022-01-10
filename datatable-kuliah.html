@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabel Data Kuliah | Admin Semesta</title>
+
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./build/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/css/datepicker.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="./build/page.css">
+
+    <!-- Javascript -->
+    <script src="./dist/js/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanillajs-datepicker@1.2.0/dist/js/datepicker.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    
+</head>
+<body class="body-bg">
+    <div class="fixed" style="display: none;"></div>
+    
+    <div class="main-wrapper">
+        <div class="sidebar expand overflow-y-auto overflow-x-hidden">
+            <div class="top-side">
+                <div class="img-top">
+                    <img src="./img/logo.png" alt="Logo Admin">
+                </div>
+                <div class="brand">
+                    <span class="brandName">JEJAK LULUSAN</span>
+                </div>
+            </div>
+            <div class="menu-wrapper">
+                <ul class="nav-menu">
+                    <li class="nav-list">
+                        <a href="./" id="dashboard" class="nav-link">
+                            <i class='bx bx-grid-alt'></i>
+                            <span class="link-name">Dashboard</span>
+                        </a>
+                        <ul class="dropdown-blank">
+                            <li>
+                                <a href="./" class="dropdown-link"><span class="link-name-collapse">Dashboard</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-list dropdown">
+                        <a class="nav-link" id="data-diri" href="javascript:void(0)" style="cursor: pointer;">
+                            &nbsp;<i class='fa fa-user'></i>
+                            <span class="link-name">&nbsp;Data Diri</span>
+                        </a>
+                        <ul class="dropdown-menu hide">
+                            <li>
+                                <a href="javascript:void(0)" class="dropdown-link"><span class="link-name-collapse">Data Diri</span></a>
+                            </li>
+                            <li>
+                                <a href="./biodata.html" id="biodata" class="dropdown-link">
+                                    <i class='bx bxs-user-detail'></i>
+                                    <span class="dropdown-name">Biodata</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./data-orangtua.html" id="data-orangtua" class="dropdown-link">
+                                    <i class='fa fa-users' ></i>
+                                    <span class="dropdown-name">Data Orang Tua</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./datatable-biodata.html" id="tabel-biodata" class="dropdown-link">
+                                    <i class='bx bxs-data'></i>
+                                    <span class="dropdown-name">Datatable Biodata</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./datatable-orangtua.html" id="tabel-orangtua" class="dropdown-link">
+                                    <i class='bx bxs-data'></i>
+                                    <span class="dropdown-name">Data Orang Tua</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-list dropdown">
+                        <a class="nav-link" id="kelulusan" href="javascript:void(0)" style="cursor: pointer;">
+                            <i class='fa fa-graduation-cap'></i>
+                            <span class="link-name">Data Kelulusan</span>
+                        </a>
+                        <ul class="dropdown-menu hide">
+                            <li>
+                                <a href="javascript:void(0)" class="dropdown-link"><span class="link-name-collapse">Data Kelulusan</span></a>
+                            </li>
+                            <li>
+                                <a href="./data-kuliah.html" id="data-kuliah" class="dropdown-link">
+                                    <i class='bx bxs-user-detail'></i>
+                                    <span class="dropdown-name">Data Kuliah</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./data-pekerjaan.html" id="data-pekerjaan" class="dropdown-link">
+                                    <i class='fa fa-users' ></i>
+                                    <span class="dropdown-name">Data Pekerjaan</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./datatable-kuliah.html" id="tabel-kuliah" class="dropdown-link">
+                                    <i class='bx bxs-data'></i>
+                                    <span class="dropdown-name">Datatable Kuliah</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./datatable-pekerjaan.html" id="tabel-pekerjaan" class="dropdown-link">
+                                    <i class='bx bxs-data'></i>
+                                    <span class="dropdown-name">Datatable Pekerjaan</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-list dropdown">
+                        <a href="javascript:void(0)" id="user-manager" class="nav-link">
+                            <i class='bx bx-user'></i>
+                            <span class="link-name">User Manager</span>
+                        </a>
+                        <ul class="dropdown-menu hide">
+                            <li>
+                                <a href="javascript:void(0)" class="dropdown-link"><span class="link-name-collapse">User Manager</span></a>
+                            </li>
+                            <li>
+                                <a href="./edit-akun.html" id="edit-akun" class="dropdown-link">
+                                    <i class='bx bxs-user'></i>
+                                    <span class="dropdown-name">Edit Akun</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./ubah-password.html" id="ubah-password" class="dropdown-link">
+                                    <i class='bx bxs-key'></i>
+                                    <span class="dropdown-name">Ubah Password</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./user.html" id="user-account" class="dropdown-link">
+                                    <i class='bx bxs-user-account' ></i>
+                                    <span class="dropdown-name">User Account</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./user-role.html" id="user-role" class="dropdown-link">
+                                    <i class='bx bxs-user-detail' ></i>
+                                    <span class="dropdown-name">User Role</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./user-level.html" id="user-level" class="dropdown-link">
+                                    <i class='bx bxs-user-badge' ></i>
+                                    <span class="dropdown-name">User Level</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="bottom-side">
+                <ul class="nav-menu">
+                    <li class="nav-list">
+                        <a href="./logout.html" class="nav-link user-link">
+                            <img src="./img/no-profile-user.png" alt="" class="user-img">
+                            <span class="link-name">Administrator</span>
+                            <i class='bx bx-log-out' style="margin-left: 20px; font-size: 30px;"></i>
+                        </a>
+                        <ul class="dropdown-blank">
+                            <li>
+                                <a href="./logout.html" class="dropdown-link user-dropdown">
+                                    <span class="link-name-collapse">Administrator</span>
+                                    <i class='bx bx-log-out'></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="main-container">
+            <div class="navbar">
+                <button class="toggle-sidebar">
+                    <i class='bx bx-menu'></i>
+                </button>
+                <div class="nav-right">
+                    <div class="notification">
+                        <button class="btn-notif">
+                            <i class='bx bxs-bell'></i>
+                            <span class="badges" data-badge="*"></span>
+                        </button>
+                        <ul class="nav-dropdown">
+                            <li class="nav-drop-list">
+                                <a href="#" class="nav-drop-link">
+                                    <i class='bx bx-comment-error' ></i>
+                                    <span class="nav-drop-name">New comments</span>
+                                </a>
+                            </li>
+                            <hr class="nav-drop-separator">
+                            <li class="nav-drop-list">
+                                <a href="#" class="nav-drop-link">
+                                    <i class='bx bx-comment-error' ></i>
+                                    <span class="nav-drop-name">New comments</span>
+                                </a>
+                            </li>
+                            <hr class="nav-drop-separator">
+                            <li class="nav-drop-list">
+                                <a href="#" class="nav-drop-link">
+                                    <i class='bx bx-comment-error' ></i>
+                                    <span class="nav-drop-name">New comments</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="nav-user">
+                        <button class="btn-user">
+                            <i class='bx bxs-user'></i>
+                        </button>
+                        <ul class="nav-dropdown">
+                            <li class="nav-drop-list nav-drop-username">
+                                <span class="nav-drop-name">Administrator</span>
+                            </li>
+                            <li class="nav-drop-list">
+                                <a href="./edit-akun.html" class="nav-drop-link">
+                                    <i class='bx bxs-user' ></i>
+                                    <span class="nav-drop-name">Profil</span>
+                                </a>
+                            </li>
+                            <hr class="nav-drop-separator">
+                            <li class="nav-drop-list">
+                                <a href="ubah-password.html" class="nav-drop-link">
+                                    <i class='bx bx-key' ></i>
+                                    <span class="nav-drop-name">Ubah password</span>
+                                </a>
+                            </li>
+                            <hr class="nav-drop-separator">
+                            <li class="nav-drop-list">
+                                <a href="./logout.html" class="nav-drop-link">
+                                    <i class='bx bx-log-out' ></i>
+                                    <span class="nav-drop-name">Logout</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <h1 class="content-title">Tabel Data Kuliah Lulusan</h1>
+
+                <div class="container">
+                    <table class="table-biodata stripe hover">
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Nama</th>
+                                <th>NISN</th>
+                                <th>TTL</th>
+                                <th>Kelas</th>
+                                <th>Tahun Lulus</th>
+                                <th>Nama Universitas</th>
+                                <th>Fakultas</th>
+                                <th>Jurusan/Prodi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="number"></td>
+                                <td class="nama">Muhamad Ramdani Hidayatullah</td>
+                                <td>9987452632</td>
+                                <td>Karawang, 30 Januari 1997</td>
+                                <td>12 IPA 1</td>
+                                <td>2015</td>
+                                <td>STMIK Rosma</td>
+                                <td>Teknik</td>
+                                <td>Teknik Informatika</td>
+                            </tr>
+                            <tr>
+                                <td class="number"></td>
+                                <td class="nama">Erna Herlina</td>
+                                <td>0023489398</td>
+                                <td>Karawang, 08 September 2002</td>
+                                <td>12 IPA 2</td>
+                                <td>2020</td>
+                                <td>Universitas Buana Perjuangan</td>
+                                <td>Ekonomi dan Bisnis</td>
+                                <td>Ekonomi Syariah</td>
+                            </tr>
+                            <tr>
+                                <td class="number"></td>
+                                <td class="nama">Adhinda Putri Larasati</td>
+                                <td>0018748391</td>
+                                <td>Jakarta, 29 Juni 2001</td>
+                                <td>12 IPA 3</td>
+                                <td>2019</td>
+                                <td>Universitas Singaperbangsa Karawang</td>
+                                <td>MIPA</td>
+                                <td>Pendidikan Matematika</td>
+                            </tr>
+                            <tr>
+                                <td class="number"></td>
+                                <td class="nama">Tri Indah Ayu Widari</td>
+                                <td>0013689357</td>
+                                <td>Brebes, 08 Agustus 2001</td>
+                                <td>12 TKJ 2</td>
+                                <td>2019</td>
+                                <td>UIN Sunan Gunung Djati</td>
+                                <td>Tarbiyah</td>
+                                <td>Pendidikan Agama Islam</td>
+                            </tr>
+                            <tr>
+                                <td class="number"></td>
+                                <td class="nama">Eman</td>
+                                <td>9959213748</td>
+                                <td>Karawang, 06 Mei 1995</td>
+                                <td>12 IPS 3</td>
+                                <td>2012</td>
+                                <td>Universitas Pasundan</td>
+                                <td>Teknik</td>
+                                <td>Teknik Industri</td>
+                            </tr>
+                            <tr>
+                                <td class="number"></td>
+                                <td class="nama">Muhamad Ramdani Hidayatullah</td>
+                                <td>9987452632</td>
+                                <td>Karawang, 30 Januari 1997</td>
+                                <td>12 IPA 1</td>
+                                <td>2015</td>
+                                <td>STMIK Rosma</td>
+                                <td>Teknik</td>
+                                <td>Teknik Informatika</td>
+                            </tr>
+                            <tr>
+                                <td class="number"></td>
+                                <td class="nama">Erna Herlina</td>
+                                <td>0023489398</td>
+                                <td>Karawang, 08 September 2002</td>
+                                <td>12 IPA 2</td>
+                                <td>2020</td>
+                                <td>Universitas Buana Perjuangan</td>
+                                <td>Ekonomi dan Bisnis</td>
+                                <td>Ekonomi Syariah</td>
+                            </tr>
+                            <tr>
+                                <td class="number"></td>
+                                <td class="nama">Adhinda Putri Larasati</td>
+                                <td>0018748391</td>
+                                <td>Jakarta, 29 Juni 2001</td>
+                                <td>12 IPA 3</td>
+                                <td>2019</td>
+                                <td>Universitas Singaperbangsa Karawang</td>
+                                <td>MIPA</td>
+                                <td>Pendidikan Matematika</td>
+                            </tr>
+                            <tr>
+                                <td class="number"></td>
+                                <td class="nama">Tri Indah Ayu Widari</td>
+                                <td>0013689357</td>
+                                <td>Brebes, 08 Agustus 2001</td>
+                                <td>12 TKJ 2</td>
+                                <td>2019</td>
+                                <td>UIN Sunan Gunung Djati</td>
+                                <td>Tarbiyah</td>
+                                <td>Pendidikan Agama Islam</td>
+                            </tr>
+                            <tr>
+                                <td class="number"></td>
+                                <td class="nama">Eman</td>
+                                <td>9959213748</td>
+                                <td>Karawang, 06 Mei 1995</td>
+                                <td>12 IPS 3</td>
+                                <td>2012</td>
+                                <td>Universitas Pasundan</td>
+                                <td>Teknik</td>
+                                <td>Teknik Industri</td>
+                            </tr>
+                            <tr>
+                                <td class="number"></td>
+                                <td class="nama">Muhamad Ramdani Hidayatullah</td>
+                                <td>9987452632</td>
+                                <td>Karawang, 30 Januari 1997</td>
+                                <td>12 IPA 1</td>
+                                <td>2015</td>
+                                <td>STMIK Rosma</td>
+                                <td>Teknik</td>
+                                <td>Teknik Informatika</td>
+                            </tr>
+                            <tr>
+                                <td class="number"></td>
+                                <td class="nama">Erna Herlina</td>
+                                <td>0023489398</td>
+                                <td>Karawang, 08 September 2002</td>
+                                <td>12 IPA 2</td>
+                                <td>2020</td>
+                                <td>Universitas Buana Perjuangan</td>
+                                <td>Ekonomi dan Bisnis</td>
+                                <td>Ekonomi Syariah</td>
+                            </tr>
+                            <tr>
+                                <td class="number"></td>
+                                <td class="nama">Adhinda Putri Larasati</td>
+                                <td>0018748391</td>
+                                <td>Jakarta, 29 Juni 2001</td>
+                                <td>12 IPA 3</td>
+                                <td>2019</td>
+                                <td>Universitas Singaperbangsa Karawang</td>
+                                <td>MIPA</td>
+                                <td>Pendidikan Matematika</td>
+                            </tr>
+                            <tr>
+                                <td class="number"></td>
+                                <td class="nama">Tri Indah Ayu Widari</td>
+                                <td>0013689357</td>
+                                <td>Brebes, 08 Agustus 2001</td>
+                                <td>12 TKJ 2</td>
+                                <td>2019</td>
+                                <td>UIN Sunan Gunung Djati</td>
+                                <td>Tarbiyah</td>
+                                <td>Pendidikan Agama Islam</td>
+                            </tr>
+                            <tr>
+                                <td class="number"></td>
+                                <td class="nama">Eman</td>
+                                <td>9959213748</td>
+                                <td>Karawang, 06 Mei 1995</td>
+                                <td>12 IPS 3</td>
+                                <td>2012</td>
+                                <td>Universitas Pasundan</td>
+                                <td>Teknik</td>
+                                <td>Teknik Industri</td>
+                            </tr>
+                            <tr>
+                                <td class="number"></td>
+                                <td class="nama">Muhamad Ramdani Hidayatullah</td>
+                                <td>9987452632</td>
+                                <td>Karawang, 30 Januari 1997</td>
+                                <td>12 IPA 1</td>
+                                <td>2015</td>
+                                <td>STMIK Rosma</td>
+                                <td>Teknik</td>
+                                <td>Teknik Informatika</td>
+                            </tr>
+                            <tr>
+                                <td class="number"></td>
+                                <td class="nama">Erna Herlina</td>
+                                <td>0023489398</td>
+                                <td>Karawang, 08 September 2002</td>
+                                <td>12 IPA 2</td>
+                                <td>2020</td>
+                                <td>Universitas Buana Perjuangan</td>
+                                <td>Ekonomi dan Bisnis</td>
+                                <td>Ekonomi Syariah</td>
+                            </tr>
+                            <tr>
+                                <td class="number"></td>
+                                <td class="nama">Adhinda Putri Larasati</td>
+                                <td>0018748391</td>
+                                <td>Jakarta, 29 Juni 2001</td>
+                                <td>12 IPA 3</td>
+                                <td>2019</td>
+                                <td>Universitas Singaperbangsa Karawang</td>
+                                <td>MIPA</td>
+                                <td>Pendidikan Matematika</td>
+                            </tr>
+                            <tr>
+                                <td class="number"></td>
+                                <td class="nama">Tri Indah Ayu Widari</td>
+                                <td>0013689357</td>
+                                <td>Brebes, 08 Agustus 2001</td>
+                                <td>12 TKJ 2</td>
+                                <td>2019</td>
+                                <td>UIN Sunan Gunung Djati</td>
+                                <td>Tarbiyah</td>
+                                <td>Pendidikan Agama Islam</td>
+                            </tr>
+                            <tr>
+                                <td class="number"></td>
+                                <td class="nama">Eman</td>
+                                <td>9959213748</td>
+                                <td>Karawang, 06 Mei 1995</td>
+                                <td>12 IPS 3</td>
+                                <td>2012</td>
+                                <td>Universitas Pasundan</td>
+                                <td>Teknik</td>
+                                <td>Teknik Industri</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+            </div>
+            <div class="footer">
+                <span>Copyright 2021 &copy; SMAN 1 Rawamerta. All right reserved.</span>
+                <span class="creator">Made with <i class='bx bxs-heart'></i> by Muhamad Ramdani H.</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Javascript -->
+    <!-- Enable active class base on window size -->
+    <script>
+        if(screen.width < 768) {
+            $("#kelulusan").addClass('active-open')
+        } else {
+            $("#kelulusan").addClass('active')
+            $("#tabel-kuliah").addClass('active-open')
+            $('#kelulusan').next().toggleClass('hide')
+            $('#kelulusan').next().toggleClass('show')
+        }
+    </script>
+    <script src="./node_modules/chart.js/dist/chart.js"></script>
+    <script src="./dist/js/admin.js"></script>
+</body>
+</html>
