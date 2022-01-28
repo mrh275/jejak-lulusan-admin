@@ -78,7 +78,6 @@ $("div.popular-post-body").slick({
           "next": "<i class='bx bx-chevron-right' ></i>"
         }
       },
-      responsive: true,
       scrollX: true,
     });
   });
