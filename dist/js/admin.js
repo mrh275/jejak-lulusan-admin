@@ -40,12 +40,6 @@ $('.dropdown-menu').on('click', function(e) {
   e.stopPropagation();
 })
 
-
-// $('.sidebar.expand ul.nav-menu').on('click', '.dropdown', function(e) {
-//   e.stopPropagation();
-// })
-
-
 $('.sidebar.collapse li.dropdown').hover( function() {
     $(this).find('.dropdown-menu').toggleClass('showMenu');
 })
@@ -120,6 +114,8 @@ const labels = [
           "next": "<i class='bx bx-chevron-right' ></i>"
         }
       },
+      responsive: true,
+      scrollX: true,
     });
 } );
 
