@@ -64,6 +64,26 @@ $("div.popular-post-body").slick({
     infinite: true,
   });
 
+  // List Post Datatable
+  $(document).ready(function() {
+    $('.table-biodata').DataTable({
+      "lengthMenu": [
+        [10, 15, 25, 50, 100, -1],
+        [10, 15, 25, 50, 100, "All"]
+      ],
+      "pagingType": "full_numbers",
+      "language": {
+        "paginate": {
+          "previous": "<i class='bx bx-chevron-left'></i>",
+          "next": "<i class='bx bx-chevron-right' ></i>"
+        }
+      },
+      responsive: true,
+      scrollX: true,
+      scroller: true,
+    });
+  });
+
 // Selecting table row
 $('.table-biodata').on( 'click', 'tr', function () {
   $('tr').not(this).removeClass('selected');
