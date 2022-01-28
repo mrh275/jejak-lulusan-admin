@@ -80,7 +80,6 @@ $("div.popular-post-body").slick({
       },
       responsive: true,
       scrollX: true,
-      scroller: true,
     });
   });
 
