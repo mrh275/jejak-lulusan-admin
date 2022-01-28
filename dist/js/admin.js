@@ -116,8 +116,9 @@ const labels = [
       },
       responsive: true,
       scrollX: true,
+      scroller: true,
     });
-} );
+  });
 
 // Selecting table row
 $('.table-biodata').on( 'click', 'tr', function () {
