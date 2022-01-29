@@ -812,6 +812,10 @@ table {
     border-radius: 5px;
   }
 
+  .dataTables_wrapper {
+    font-size: .75rem;
+  }
+
   .footer {
     height: -webkit-max-content;
     height: -moz-max-content;

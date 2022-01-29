@@ -599,6 +599,10 @@ table {
         border-radius: 5px;
     }
 
+    .dataTables_wrapper {
+        font-size: .75rem;
+    }
+
     .footer {
         height: max-content;
         justify-content: center;
