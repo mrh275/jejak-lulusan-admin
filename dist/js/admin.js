@@ -64,42 +64,6 @@ $("div.popular-post-body").slick({
     infinite: true,
   });
 
-//   Visitor chart
-const labels = [
-    'Juli',
-    'Agustus',
-    'September',
-    'Oktober',
-    'November',
-    'Desember'
-  ];
-  const data = {
-    labels: labels,
-    datasets: [{
-      label: 'Pengunjung',
-      backgroundColor: '#0099ff',
-      borderColor: '#0099ff',
-      data: [70, 30, 54, 70, 120, 210, 463],
-    }]
-  };
-  const config = {
-    type: 'line',
-    data: data,
-    options: {
-        responsive: true,
-        plugin: {
-          title: {
-            display: true,
-            text: "Data pengunjung bulanan"
-          },
-        },
-    }
-  };
-  const myChart = new Chart(
-    document.getElementById('visitor-chart'),
-    config
-  );
-
   // List Post Datatable
   $(document).ready(function() {
     $('.table-biodata').DataTable({
@@ -115,6 +79,8 @@ const labels = [
         }
       },
       responsive: true,
+      scrollX: true,
+      autoWidth: false,
     });
   });
 
